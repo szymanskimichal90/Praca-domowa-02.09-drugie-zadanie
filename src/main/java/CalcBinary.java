@@ -1,20 +1,16 @@
 public class CalcBinary {
 
     private StringBuilder binaryNumber = new StringBuilder();
-
+    int number;
 
     public String intToBinary(int insertedInt) {
 
-        int binary[] = new int[30];
-        int i = 0;
-        while (insertedInt > 0) {
-            binary[i++] = insertedInt % 2;
+          while (insertedInt > 0) {
+            number = insertedInt % 2;
             insertedInt = insertedInt / 2;
+            binaryNumber.append(number);
         }
-        for (int i1 = i - 1; i1 >= 0; i1--) {
-            binaryNumber.append(binary[i1]);
-        }
-        return binaryNumber.toString();
+        return binaryNumber.reverse().toString();
     }
 
 
