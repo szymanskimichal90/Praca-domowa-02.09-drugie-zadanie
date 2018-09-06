@@ -1,6 +1,6 @@
 public class CalcBinary {
 
-    StringBuilder binaryNumber = new StringBuilder();
+    private StringBuilder binaryNumber = new StringBuilder();
 
 
     public String intToBinary(int insertedInt) {
@@ -25,9 +25,9 @@ public class CalcBinary {
         int index = a.length();
         if (a.charAt(a.length() - 1) == '0') {
             for (int i = 0; i < index; i++) {
-                {
-                    a = a.substring(0, index - 1);
-                    index = a.length();
+                {   int index1=a.length();
+                    a = a.substring(0, index1 - 1);
+
                 }
             }
         }
@@ -40,7 +40,12 @@ public class CalcBinary {
         }
         return length;
     }
+
+
 }
+
+
+
 
 
 //        String[] strings = a.split("1");
